@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  * {
+    @apply border-on-surface/5;
+  }
+
+  body {
+    @apply bg-surface text-on-surface antialiased;
+    font-family: 'Manrope', sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Noto Serif', Georgia, serif;
+  }
+
+  ::selection {
+    @apply bg-primary-container/30;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
