@@ -91,7 +91,7 @@ export default function ConfirmationPage() {
         discount: 0,
         total,
         paymobTransactionId: paymentId,
-        notes: shippingInfo?.notes || null,
+        notes: shippingInfo?.notes ?? undefined,
       });
 
       if (orderIdCreated) {
